@@ -6,24 +6,31 @@
     <title>Fernando Sanchez - Consultor tecnico y programador</title>
     <link rel="stylesheet" href="./src/personal-website/normalize.css">
     <link rel="stylesheet" href="./src/personal-website/personal-website.css">
+    <script src="./lib/jquery/jquery-3.5.1.min.js"></script>
+    <script src="./lib/i18next/i18next.min.js"></script>
+    <script src="./lib/i18next/i18nextBrowserLanguageDetector.min.js"></script>
+    <script src="./lib/jquery-i18next/jquery-i18next.min.js"></script>
+    <script src="./src/internationalization/internationalization.js"></script>
 </head>
 <body>
     <header>
         <img src="./public/images/logo-fernando-sanchez-white-2020.png" alt="logo">
         <span class="name">Fernando Sánchez</span>
-        <span class="profession">Consultor técnico y programador</span>
+        <span class="profession" data-i18n="profession">Consultor técnico y programador</span>
     </header>
     <section class="menu">
-       
+    <span>Idioma: </span>
+       <img id="spanish-flag" src="./public/images/spain-flag-icon-32.png" alt="switch-to-spanish">
+       <img id="us-flag" src="./public/images/united-states-of-america-flag-icon-32.png" alt="switch-to-english">
     </section>
     <div class="page-content">
         <section class="about">
-            <h1>Bienvenido a mi sitio web</h1>
+            <h1 data-i18n="welcome">Bienvenido a mi sitio web</h1>
             <div class="personal-profile-container">
                 <img src="./public/images/0.png" alt="professional-photo">
                 <div class="personal-profile">
                     <span class="title">Fernando Sánchez</span>
-                    <p class="description">
+                    <p class="description" data-i18n="personal-description">
                         Profesional de tecnología con mas de
                         6 años ayudando a crear e implementar productos de software como
                         programador, consultor y asesor de tecnología.
@@ -31,22 +38,23 @@
                 </div>
             </div>
             <div>
-                <h2>Creo e implemento software para:</h2>
+                <h2 data-i18n="work-title">Con mi conocimiento, ayudo a:</h2>
                 <div class="work-area business-work-area">
                     <img src="./public/images/baseline_business_white_48dp.png" alt="business-icon">
                     <div class="work-description">
-                        <p class="title">Empresas</p>
-                        <p class="description">
-                            Impulsar el negocio de forma sostenida en el tiempo,
-                            con software enfocado en generar beneficios mantenibles
+                        <p class="title" data-i18n="business-work-title">Empresas</p>
+                        <p class="description" data-i18n="business-work-description">
+                            Impulsar el negocio de forma sostenida en el tiempo, 
+                            con software enfocado en generar ganancias recurrentes
+                            y reducir costos
                         </p>
                     </div>
                 </div>
                 <div class="work-area entrepreneur-work-area">
                     <img src="./public/images/hombre-de-traje-y-corbata-white.png" alt="enterpreneur-icon">
                     <div class="work-description">
-                        <p class="title">Emprendedores</p>
-                        <p class="description">
+                        <p class="title" data-i18n="entrepreneur-work-title">Emprendedores</p>
+                        <p class="description" data-i18n="entrepreneur-work-description">
                             Hacer realidad nuevas ideas de negocio,
                             utilizando como vehiculo tecnologías y software costos-efectivos
                         </p>
@@ -55,8 +63,8 @@
                 <div class="work-area people-work-area">
                     <img src="./public/images/person-image-white.png" alt="person-icon">
                     <div class="work-description">
-                        <p class="title">Personas</p>
-                        <p class="description">
+                        <p class="title" data-i18n="people-work-title">Personas</p>
+                        <p class="description" data-i18n="people-work-description">
                             Lograr una vida más satisfactoria y plena con asistencia 
                             de software enfocado en las personas.
                         </p>
@@ -66,16 +74,16 @@
         </section>
         <section class="contact">
             <div>
-                <h1>¡Trabajemos juntos!</h1>
-                <p>Contactame por las siguientes vias y exploremos que tan lejos podemos llegar juntos:</p>
+                <h1 data-i18n="contact-title">¡Trabajemos juntos!</h1>
+                <p data-i18n="contact-description">Contactame por las siguientes vias y exploremos que tan lejos podemos llegar juntos:</p>
                 <div>
-                    <span class="contact-method"><img src="./public/images/white-circle-email.png" alt="email-icon"><p><span class="contact-method-title">Correo:</span><a href="mailto:fesanchez@gitubis.com">fesanchez@fitubis.com</a></p></span>
+                    <span class="contact-method"><img src="./public/images/white-circle-email.png" alt="email-icon"><p><span class="contact-method-title" data-i18n="email-label">Correo:</span><a href="mailto:fesanchez@gitubis.com">fesanchez@fitubis.com</a></p></span>
                     <span class="contact-method"><img src="./public/images/white-circle-linkedin.png" alt="linkedin-icon"><p><span class="contact-method-title">Linkedin:</span><a href="https://www.linkedin.com/in/fesr" target="_blank">www.linkedin.com/in/fesr</a></p></span>
                 </div>
             </div>
             <div class="copyright">
-                <p>Iconos diseñados por Freepik y Google</p>
-                <p>©2020 Fernando Sánchez, todos los derechos reservados</p>
+                <p data-i18n="copyright-icon">Iconos diseñados por Freepik y Google</p>
+                <p data-i18n="copyright-own">©2020 Fernando Sánchez, todos los derechos reservados</p>
             </div>
         </section>
     </div>

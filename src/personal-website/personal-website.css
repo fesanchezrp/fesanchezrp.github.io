@@ -41,8 +41,22 @@ header>.name{
 }
 
 .menu{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
     background-color: #485F75;
+    color: #FFFFFF;
+    font-weight: bold;
     height:30px;
+    padding: 0px 10px;
+}
+.menu> img{
+    margin-left:10px;
+}
+
+.menu> img:hover{
+    cursor: pointer;
 }
 
 .page-content{
