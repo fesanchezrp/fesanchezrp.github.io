@@ -1,0 +1,56 @@
+body{
+    color: #333333;
+}
+
+header{
+    background-color: #272424;
+    color: #FFFFFF;
+}
+
+header>.name{
+    font-weight: 700;
+}
+
+.menu{
+    background-color: #485F75;
+}
+
+.personal-profile>.title{
+    font-weight: 700;
+}
+
+.work-area{
+    color:#FFFFFF;
+}
+
+.work-description> .title{
+    font-weight: 700;
+}
+
+
+.business-work-area{
+    background-image: url('../../public/images/business-background.png');
+    background-size:cover;
+}
+
+.entrepreneur-work-area{
+    background-image: url('../../public/images/entrepreneur-background.png');
+    background-size:cover;
+}
+
+.people-work-area{
+    background-image: url('../../public/images/entrepreneur-background.png');
+    background-size:cover;
+}
+
+.contact{
+    color: #FFFFFF;
+    background-image: url('../../public/images/about-background.png');
+    background-size:cover;
+    background-position: center;
+}
+
+.contact-method-title{
+    font-weight: 700;
+}
+

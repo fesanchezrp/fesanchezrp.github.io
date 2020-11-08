@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+# Fitubis.com
+<br>
+Fitubis.com es una iniciativa personal para crear software que encage con las empresas y personas para generar valor, no restarlo, como suele pasar comunmente:
+<br>
+* No cumple con las expectativas del negocio, los usuarios finales que lo utiliza, o los clientes.
+* El desarrollo supera el presupuesto inicial, y en el mediano plazo, aumenta los gastos pasivos para su mantenimiento.
+* Los tiempos de desarrollo son extendidos, las fechas de entrega no cumplidas, la frustración aumenta y la calidad baja.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
+Los tres puntos anteriores solo pueden ser solucionados con una visión integral de creación de software en beneficio al negocio, sus empleados y clientes.
+<br>
+## Fases
 
-## Available Scripts
+El plan para concevir Fitubis.com está divido en dos fases
 
-In the project directory, you can run:
+**Fase 1: Preparación** *Corto plazo*
 
-### `npm start`
+* Entrenamiento personal en el área de negocios, tecnología y humana para crear una visión integral de desarrollo de software única y la capacidad de llevarla a cabo, esto diferenciará el servicio.
+* Obtención de ordenes de trabajo individuales, para obtener fondos para ejecutar la iniciativa, potenciar mi entrenamiento y vivir mientras ejecuto el plan.
+* Reclutamiento de personas clave para ejecutar la iniciativa, filtradas por las capacidades necesarias para hacer realidad mi visión.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<br>
+**Fase 2: Ejecución** *Mediano y largo plazo*
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Crear una empresa formal con empleados.
+* Crear productos propios de forma individual y a traves de alianzas con diferentes industrias.
+* Establecer alianza con proveedores de software para potenciar su soluciones.
+* Lograr una IPO.
 
-### `npm test`
+## TO-DO
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. [ ]  Estructura de directorio del proyecto.
+2. [ ]  Pantallas que tendrá mi sitio personal fitubis.com.
+3. [ ]  Jerarquía de información distribuida en las pantallas.
+4. [ ]  Distribución de la información y gráficos en la pantalla.
+5. [ ]  Funcionalidades por pantalla.
+6. [ ]  Diseño técnico.
+7. [ ]  Codificación del sitio web.
+8. [ ]  Pruebas funcionales. 
+9. [ ]  Salida a producción.
