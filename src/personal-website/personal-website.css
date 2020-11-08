@@ -1,32 +1,103 @@
+html{
+    display: flex;
+}
 body{
     color: #333333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    margin: 5px 0px 5px 0px;
+}
+
+a:link{
+    color: #94c0e9;
+}
+
+a:hover{
+    color: #c8def2;   
+}
+a:visited{
+    color: #397ab6;
 }
 
 header{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #272424;
     color: #FFFFFF;
+    height: 40px;
+    padding:5px;
 }
 
+header> img{
+    height:70px;
+}
 header>.name{
     font-weight: 700;
+    margin-right:10px;
 }
 
 .menu{
     background-color: #485F75;
+    height:30px;
 }
 
+.page-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.about, .contact{
+    width:50%;
+    padding: 40px 80px 20px 80px;
+}
+
+.about{
+    background-color: #F5F5F5;
+}
+
+.personal-profile-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.personal-profile-container > img{
+    height:100px;
+    margin-right: 5px;
+}
 .personal-profile>.title{
     font-weight: 700;
 }
 
 .work-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
     color:#FFFFFF;
+    padding: 10px 40px 10px 20px;
+    margin-bottom:30px;
+}
+
+.work-area > img{
+    height:60px;
+    margin-right: 40px;
 }
 
 .work-description> .title{
     font-weight: 700;
 }
 
+.work-description> .description{
+    font-size:14px;
+}
 
 .business-work-area{
     background-image: url('../../public/images/business-background.png');
@@ -39,18 +110,73 @@ header>.name{
 }
 
 .people-work-area{
-    background-image: url('../../public/images/entrepreneur-background.png');
+    background-image: url('../../public/images/people-background.png');
     background-size:cover;
 }
 
 .contact{
     color: #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background-image: url('../../public/images/about-background.png');
     background-size:cover;
     background-position: center;
 }
 
+.contact-method{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.contact-method > img{
+    height:100px;
+    margin-right:10px;
+}
 .contact-method-title{
     font-weight: 700;
+    margin-right:5px;
 }
+.copyright{
+    color:#FFFFFF;
+    text-align: right;
+}
+
+/*Para moviles*/
+@media only screen and (max-width: 768px) {
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+    
+    p{
+        font-size:12px;
+    }
+
+    .page-content{
+        flex-direction: column;
+    }
+
+    .work-area > img{
+        height:50px;
+        margin-right: 40px;
+    }
+    
+    .about,.contact{
+        width:auto;
+        padding: 20px 20px 20px 20px;
+    }
+
+    .contact-method > img{
+        height:50px;
+        margin-right:10px;
+    }
+    
+  }
 
