@@ -1,11 +1,13 @@
 html{
-    display: flex;
+    height: 100vh;
+    min-height: 100%;
 }
 body{
     color: #333333;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    min-height: 100%;
 }
-
 p {
     margin: 5px 0px 5px 0px;
 }
@@ -28,8 +30,8 @@ header{
     align-items: center;
     background-color: #272424;
     color: #FFFFFF;
-    height: 40px;
-    padding:5px;
+    height: 20px;
+    padding:10px 5px;
 }
 
 header> img{
@@ -64,6 +66,8 @@ header>.name{
     flex-direction: row;
     justify-content: space-between;
     align-items: stretch;
+    min-height: calc(100% - 70px);
+    height: calc(100vh -70px);
 }
 
 .about, .contact{
