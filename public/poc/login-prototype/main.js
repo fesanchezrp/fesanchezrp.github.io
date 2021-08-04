@@ -460,7 +460,7 @@ Vue.component('reporter', {
                         <th>RUC</th>
                         <th>Código de comercio</th>
                         <th>Cuenta bancaria</th>
-                        <th>Fecha de expiración</th>
+                        <th>Fecha de creación</th>
                         <th>Fecha de liquidación</th>
                         <th>Tipo de cobro</th>
                         <th>Orden de pago</th>
@@ -1588,7 +1588,9 @@ const routes = [
     {path: '/customize', component: 'customize-application'},
     {path: '/reporter', component: 'reporter'},
     {path: '/ruc-validator', component: 'ruc-validator'},
-    {path: '/import-data', component: 'import-data'}
+    {path: '/import-data', component: 'import-data'},
+    {path: '/entity-list', component: 'entity-list'},
+    {path: '/edit', component: 'help-editor'},
 ];
 
 const router = new VueRouter({

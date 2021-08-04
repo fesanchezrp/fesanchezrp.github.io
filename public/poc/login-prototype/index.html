@@ -1,0 +1,116 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
+    <title>OpenID Login Prototype</title>
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./lib/bootstrap-colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="./lib/bootstrap-select/bootstrap-select.min.css">
+    <link rel="stylesheet" href="./lib/datatables/datatables.css">
+    <link rel="stylesheet" href="./lib/datatables/jquery.dataTables.css">
+    <link rel="stylesheet" href="./lib/rangeSlider/ion.rangeSlider.min.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <link href='./css/vue-loading-skeleton.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./css/main.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/tippy.js@6/themes/translucent.css"
+  />
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>    
+    <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">    
+    <script src="./lib/vue.js"></script>
+    <script src="./lib/vue-router.js"></script>
+    <script src="./lib/axios.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+  </head>
+  <body>
+    <div id="app">
+      <login v-if="!loggedIn && !loading" v-on:login="loggedIn = true"></login>
+      <landing v-else-if="loggedIn && !loading" @logout="logOffUser"></landing>
+      <div v-else class="spinner-border loader" style="width: 7rem; height: 7rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    </body>
+    <script src="./data/data-menu.js"></script>
+    <script src="./data/data-report.js"></script>
+    <script src="./data/data-site.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script type="text/javascript" src="./lib/bootstrap-select/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="./lib/datatables/datatables.js"></script>
+    <script type="text/javascript" src="./lib/csv/csv.js"></script>
+    <script type="text/javascript" src="./lib/rangeSlider/ion.rangeSlider.min.js"></script>
+    <script type="text/javascript" src="./lib/file-saver/FileSaver.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>    <!-- <script type="text/javascript" src="./lib/vue-loader/vue-loading-skeleton.common.js"></script> -->
+    <script type="text/javascript" src="./lib/vue-loader/vue-loading-skeleton.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/attaches@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@editorjs/image@2.3.0"></script>
+    <script src="./js/data-table.js"></script>
+    <script src="./js/navigation.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/responsive-sidebar.js"></script>
+    <script src="./js/form-navigator.js"></script>
+    <script src="./js/step-bar.js"></script>
+    <script src="./js/new-entity.js"></script>
+    <script src="./js/entity.js"></script>
+    <script src="./js/entities.js"></script>
+    <script src="./js/main-menu.js"></script>
+    <script src="./js/reporter.js"></script>
+    <script src="./js/import-data.js"></script>
+    <script src="./js/reporter.js"></script>
+    <script src="./js/app-customization.js"></script>
+    <script src="./js/help-editor.js"></script>
+    <script src="./js/helper.js"></script>
+    <script src="./js/landing.js"></script>
+    <script src="./js/login.js"></script>
+    <script src="./js/routes.js"></script>
+    
+    <script>
+        Vue.prototype.$EventBus = new Vue()
+        var vm = new Vue({
+            el: '#app',
+            router: router,
+            data: {
+                message: 'Test Message',
+                loggedIn: false,
+                loading: true
+            },
+            methods: {
+              logOffUser: function(){
+                this.loggedIn = false
+              },
+              getUserDetails(){
+                axios({method: 'get', url: 'https://shorthaired-bush-pegasus.glitch.me/user', withCredentials: true})
+                  .then((user)=>{
+                    this.loggedIn = true
+                    this.loading = false
+                    console.log('Logged in')
+                  })
+                  .catch((err)=>{
+                     this.loggedIn = false
+                     this.loading = false
+                     console.log('Not logged in')
+                  })
+              }
+            },
+            mounted(){
+              this.getUserDetails()
+            }
+        })
+    </script>
+  </body>
+</html>
