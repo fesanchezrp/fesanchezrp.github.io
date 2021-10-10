@@ -103,6 +103,9 @@
                   .catch((err)=>{
                      this.loggedIn = false
                      this.loading = false
+                     if(err.request.status == 401){
+                        location.assign(`https://shorthaired-bush-pegasus.glitch.me/login/eq?origin=${window.location.href}`);
+                     }
                      console.log(err)
                   })
               }
