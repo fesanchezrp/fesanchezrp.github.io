@@ -91,14 +91,13 @@
             },
             methods: {
               logOffUser: function(){
-                this.loggedIn = false
+                location.assign(`https://shorthaired-bush-pegasus.glitch.me/adb2clogout`);
               },
               getUserDetails(){
                 axios({method: 'get', url: 'https://shorthaired-bush-pegasus.glitch.me/user', withCredentials: true})
                   .then((user)=>{
                     this.loggedIn = true
                     this.loading = false
-                    console.log('Logged in')
                   })
                   .catch((err)=>{
                      this.loggedIn = false

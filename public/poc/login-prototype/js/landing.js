@@ -27,13 +27,7 @@ var landing = Vue.component('landing',{
             sidebar.toggleClass('active')
         },
         logout: function(){
-            axios({method: 'get', url: 'https://shorthaired-bush-pegasus.glitch.me/logout', withCredentials: true})
-            .then((user)=>{
-                this.$emit('logout')
-            })
-            .catch((err)=>{
                this.$emit('logout')
-            })
         },
         updateApplicationPalette: function(paletteElement, color){
             switch(paletteElement){
